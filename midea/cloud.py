@@ -91,7 +91,7 @@ class cloud:
                 #self.login()
                 return self.api_request(endpoint, args)
             else:
-                _LOGGER.info("RecursionError: '{}' - '{}'".format(response['errorCode'], response['msg']))
+                _LOGGER.error("RecursionError: '{}' - '{}'".format(response['errorCode'], response['msg']))
                 #_LOGGER.info("RecursionError: '{}'".format(endpoint))
                 raise RecursionError()
 
