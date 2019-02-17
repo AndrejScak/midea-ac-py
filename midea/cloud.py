@@ -200,7 +200,7 @@ class cloud:
             self.login()
 
         #if(__debug__):
-        _LOGGER.info("Sending to {}: {}".format(id, data.hex()))
+        _LOGGER.debug("Sending to {}: {}".format(id, data.hex()))
         encoded = self.encode(data)
         order = self.security.aes_encrypt(encoded)
         response = self.api_request('appliance/transparent/send', {
