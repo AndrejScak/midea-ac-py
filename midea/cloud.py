@@ -2,6 +2,7 @@ import requests
 import datetime
 import json
 import logging
+import time
 
 from threading import Lock
 
@@ -156,7 +157,7 @@ class cloud:
 
         _LOGGER.info("FIX self.loginfix: self.session: '{}' - '{}'".format(self, self.security.accessToken))
         self.security.accessToken = self.session['accessToken']
-        time.sleep(5) #Give it some time..
+        time.sleep(10) #Give it some time..
 
     def list(self, home_group_id=-1):
         """
